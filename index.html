@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <title>Konjički klub Adeen</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <nav>
+            <a href="index.html" class="brand"><img src="images/adeen kk.png " class="picture"></a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="index.html">Početna</a>
+                <a href="aboutUs.html">O nama</a>
+                <a href="skola.html">Škola jahanja</a>
+                <a href="terapijsko.html">Terapijsko jahanje</a>
+                <a href="paketi.html">Paketi</a>
+                <a href="kontakt.html">Kontakt</a>
+            </div>
+        </div>
+    </nav>
+        
+
+
+        <section class="home">
+            <video class="video-slide active" autoplay muted loop>
+                <source src="images/video (online-video-cutter.com).mp4" type="video/mp4">
+            </video>
+            <video class="video-slide" autoplay muted loop>
+                <source src="images/terapeutic (online-video-cutter.com).mp4" type="video/mp4">
+            </video>
+            <video class="video-slide" autoplay muted loop>
+                <source src="images/terrainriding.mp4" type="video/mp4">
+            </video>
+            <video class="video-slide" autoplay muted loop>
+                <source src="images/pansion (online-video-cutter.com).mp4" type="video/mp4">
+            </video>
+            <video class="video-slide" autoplay muted loop>
+                <source src="images/ridingschool (online-video-cutter.com).mp4" type="video/mp4">
+            </video>
+            
+            <div class="content active">
+                <h1>K.K.<br><span>Adeen</span></h1>
+                <p>K.K. Adeen osnovan je 2001.godine na obroncima Bilogore te je kroz svoju povijest postao jedan od najtrofejnijih hrvatskih konjičkih klubova.
+                    U ponudi ima razne programe koji su upotpunjeni tišinom, mirom, čistoćom zraka, ali i ljepotama krajolika</p>
+                <a href="aboutUs.html">Više...</a>
+            </div>
+
+            <div class="content">
+              <h1>Terapijsko<br><span>jahanje</span></h1>
+              <p>Terapijsko jahanje je jahanje prilagođeno osobama s posebnim potrebama. Kretnje konja pospješuje ravnotežu, probavu, mišićni tonus, umanjuje spazme, opušta, te pruža neopisiv osjećaj.
+                U ove svrhe koriste se samo mirni, posluši i dobro odgojeni konji.</p>
+              <a href="terapijsko.html">Više...</a>
+            </div>
+
+            <div class="content">
+              <h1>Terensko<br><span>jahanje</span></h1>
+              <p>Za iskusne jahače, ali i one bez iskustva jahanja nudimo upoznavanje prekrasnog kraja na obroncima Bilogore te opuštanje podalje od vreve grada. </p>
+              <a href="paketi.html">Više...</a>
+            </div>
+
+            <div class="content">
+              <h1>pansioni<br></h1>
+              <p>Osim mogućnosti jahanja i upoznavanja konja te prirode, također nudimo i visokokvalitetne pansione za konje te garantiramo kako će vaši četveronožni prijatelji svakim danom preovedenim
+                u našem pansionu biti obasipani ljubavlju i brigom.</p>
+              <a href="paketi.html">Više...</a>
+            </div>
+            
+            <div class="content">
+                <h1>Škola<br><span>jahanja</span></h1>
+                <p>Škola jahanja održava se za polaznike uzrasta od 6 pa na dalje. Satovi su individualni,a uče se osnove o samim kojnima kao životinjama, brizi za njih te 
+                  na kraju i samostalno jahanje koje uključuje hod, kas i galop.</p>
+                <a href="skola.html">Više...</a>
+            </div>
+
+            <div class="media-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            
+            <div class="slider-navigation">
+              <div class="nav-btn active"></div>
+              <div class="nav-btn"></div>
+              <div class="nav-btn"></div>
+              <div class="nav-btn"></div>
+              <div class="nav-btn"></div>
+            </div>
+          </section>
+
+        
+          <script type="text/javascript">
+            //Javacript for responsive navigation menu
+            const menuBtn = document.querySelector(".menu-btn");
+            const navigation = document.querySelector(".navigation");
+        
+            menuBtn.addEventListener("click", () => {
+              menuBtn.classList.toggle("active");
+              navigation.classList.toggle("active");
+            });
+        
+            //Javacript for video slider navigation
+            const btns = document.querySelectorAll(".nav-btn");
+            const slides = document.querySelectorAll(".video-slide");
+            const contents = document.querySelectorAll(".content");
+        
+            var sliderNav = function(manual){
+              btns.forEach((btn) => {
+                btn.classList.remove("active");
+              });
+        
+              slides.forEach((slide) => {
+                slide.classList.remove("active");
+              });
+        
+              contents.forEach((content) => {
+                content.classList.remove("active");
+              });
+        
+              btns[manual].classList.add("active");
+              slides[manual].classList.add("active");
+              contents[manual].classList.add("active");
+            }
+        
+            btns.forEach((btn, i) => {
+              btn.addEventListener("click", () => {
+                sliderNav(i);
+              });
+            });
+            </script>
+
+    </body>
+</html>
